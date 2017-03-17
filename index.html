@@ -12,18 +12,16 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <form>
-                <div class="form-group" id="users">
-                    <label for="username">Enter Github User Name :</label>
-                    <input type="text" class="form-control" id="username" placeholder="Github Username"> </div>
-                <button type="submit" class="btn btn-default" id="submit">Submit</button>
-                <div id="solution"></div>
+    <h1>Github Repositories Finder</h1>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <input type="text" placeholder="Github Username" />
+                <button>Find User</button>
             </form>
         </div>
+        <div id="gitrepos"></div>
     </div>
-    <div id="solution"></div>
 </body>
 
 </html>
