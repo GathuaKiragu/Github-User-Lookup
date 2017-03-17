@@ -1,0 +1,17 @@
+{
+  "name": "github-user-lookup",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gathua Kiragu <kiragugathua@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
