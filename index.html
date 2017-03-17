@@ -6,17 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/frontend.css">
+    <script type="text/javascript" src="js/user-interface.js"></script>
+</head>
 
 <body>
-    <div class="jumbotron">
-        <form>
-            <div class="form-group">
-                <label for="email">Enter Github User Name :</label>
-                <input type="email" class="form-control" id="email" placeholder="Github Username"> </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+    <div class="container">
+        <div class="jumbotron">
+            <form>
+                <div class="form-group" id="users">
+                    <label for="username">Enter Github User Name :</label>
+                    <input type="text" class="form-control" id="username" placeholder="Github Username"> </div>
+                <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                <div id="solution"></div>
+            </form>
+        </div>
     </div>
+    <div id="solution"></div>
 </body>
 
 </html>

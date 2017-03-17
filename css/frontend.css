@@ -1,0 +1,10 @@
+.container {
+    padding: 20px;
+    float: center;
+}
+
+.jumbotron {
+    padding: 20px;
+    height: 300px;
+    width: 380px;
+}
