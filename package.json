@@ -1,5 +1,5 @@
 {
-  "name": "github-user-lookup",
+  "name": "github-userlookup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/GathuaKiragu/Github-User-Lookup/issues"
   },
-  "homepage": "https://github.com/GathuaKiragu/Github-User-Lookup#readme"
+  "homepage": "https://github.com/GathuaKiragu/Github-User-Lookup#readme",
+  "devDependencies": {
+    "bower-files": "^3.14.1",
+    "browserify": "^14.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^2.1.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.4",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }

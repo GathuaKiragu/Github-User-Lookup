@@ -2,25 +2,31 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Github Name Finder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/frontend.css">
-    <script type="text/javascript" src="js/user-interface.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
 </head>
 
 <body>
     <h1>Github Repositories Finder</h1>
     <div class="login-page">
         <div class="form">
-            <form class="login-form">
-                <input type="text" placeholder="Github Username" />
-                <button>Find User</button>
+            <form class="login-form" id="search">
+                <input type="text" id="input" placeholder="Github Username" />
+                <button type="submit">Find-User</button>
             </form>
         </div>
-        <div id="gitrepos"></div>
+    </div>
+    <div id="results">
+        <div id="repos">
+            <div id="gitrepos"></div>
+        </div>
     </div>
 </body>
 

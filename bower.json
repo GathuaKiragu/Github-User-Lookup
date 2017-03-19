@@ -1,17 +1,22 @@
 {
-  "name": "github-user-lookup",
+  "name": "github-userlookup",
   "description": "",
   "main": "index.js",
   "authors": [
     "Gathua Kiragu <kiragugathua@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/GathuaKiragu/Github-User-Lookup",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "moment": "^2.17.1",
+    "jquery": "^3.2.0",
+    "bootstrap": "^3.3.7"
+  }
 }
