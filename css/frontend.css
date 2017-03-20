@@ -1,10 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 .login-page {
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
 }
-
+.orange{
+    font-size: 46px;
+    color: ‎#8E4585;
+    text-align: center;
+}
+#results{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
 .form {
     position: relative;
     z-index: 1;

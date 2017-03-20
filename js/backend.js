@@ -15,7 +15,7 @@ var githubRepos = function (username) {
                             }
                             $("#repos").append("<div class='col-md-12'>" + "<h1><a href='" + this.url + "'><span class='orange'></span> " + this.name + "</a></h1>" + "<div class='col-md-12'>" + "<p>Created: " + created + "</p>" + "<p>Updated: " + updated + "</p>" + "</div>" + "/"
                                 "<div class='col-md-12'>" + "<p>" + description + "</p>" + "</div>" + "/"
-                                "</div>" //closing col-sm-6
+                                "</div>" 
                             );
                         });
                     }
