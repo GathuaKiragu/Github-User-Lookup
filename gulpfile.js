@@ -1,3 +1,4 @@
+// Initializing Dependancies
 var gulp = require ("gulp");
 var browserify = require ("browserify");
 var source = require ("vinyl-source-stream");
@@ -22,12 +23,15 @@ var lib = require('bower-files') ({
 });
 
 var buildProduction = utilities.env.production;
+// This task concatinates files with -interface.js file extension and saves the results to allConcat.js in the tmp folder
 
 gulp.task ("concatInterface", function() {
   return gulp.src (["./js/*-interface.js"])
     .pipe (concat("allConcat.js"))
     .pipe (gulp.dest("./tmp"));
 });
+
+// This task translates the pingpong-interface interface in a way the browser can understand and copies the the results in app.js
 
 gulp.task ("jsBrowserify", ["concatInterface"], function() {
   return browserify ({entries: ["./tmp/allConcat.js"]})
@@ -80,6 +84,7 @@ gulp.task ("build", ["clean"], function() {
   gulp.start ("cssBuild");
 });
 
+// This Task jshint helps us to detect errors and potential problems in all JavaScript files.
 gulp.task ("jshint", function() {
   return gulp.src (["js/*.js"])
     .pipe (jshint())

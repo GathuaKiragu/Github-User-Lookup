@@ -1,7 +1,7 @@
 
-var githubRepos = require('./../js/backend.js').repoModule; //imports the backend js properties 
+var githubRepos = require('./../js/backend.js').repoModule; //imports the backend js properties
 
-$('.message a').click(function () {// This function animates the form 
+$('.message a').click(function () {// This function animates the form
     $('form').animate({
         height: "toggle"
         , opacity: "toggle"
