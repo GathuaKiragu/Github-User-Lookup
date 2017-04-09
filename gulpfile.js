@@ -23,6 +23,7 @@ var lib = require('bower-files') ({
 });
 
 var buildProduction = utilities.env.production;
+
 // This task concatinates files with -interface.js file extension and saves the results to allConcat.js in the tmp folder
 
 gulp.task ("concatInterface", function() {
@@ -31,7 +32,7 @@ gulp.task ("concatInterface", function() {
     .pipe (gulp.dest("./tmp"));
 });
 
-// This task translates the pingpong-interface interface in a way the browser can understand and copies the the results in app.js
+// This task translates the interface in a way the browser can understand and copies the the results in app.js
 
 gulp.task ("jsBrowserify", ["concatInterface"], function() {
   return browserify ({entries: ["./tmp/allConcat.js"]})
@@ -40,18 +41,21 @@ gulp.task ("jsBrowserify", ["concatInterface"], function() {
     .pipe (gulp.dest("./build/js"));
 });
 
+// Task to Minify browserified files
 gulp.task ("minifyScripts", ["jsBrowserify"], function() {
   return gulp.src ("./build/js/app.js")
     .pipe (uglify())
     .pipe (gulp.dest("./build/js"));
 });
 
+// Concatinate and minify all bower Dependancies
 gulp.task ("bowerJS", function() {
   return gulp.src (lib.ext("js").files)
     .pipe (concat("vendor.min.js"))
     .pipe (uglify())
     .pipe (gulp.dest("./build/js"));
 });
+// Concatinate and minify all bower css files
 
 gulp.task ("bowerCSS", function() {
   return gulp.src (lib.ext("css").files)
@@ -59,6 +63,9 @@ gulp.task ("bowerCSS", function() {
     .pipe (gulp.dest("./build/css"));
 });
 
+
+
+// The cssBuild task takes all .scss files files passes the sass package init and saves the results in the biuld/css directory
 gulp.task ("cssBuild", function() {
   return gulp.src (["scss/*.scss"])
     .pipe (sourcemaps.init())
@@ -91,6 +98,9 @@ gulp.task ("jshint", function() {
     .pipe (jshint.reporter("default"));
 });
 
+// Each of the following three task reloads our server when (JS, bower dependencies, and HTML) are changed,
+ // after running the necessary dependencies.
+
 gulp.task ("jsBuild", ["jsBrowserify", "jshint"], function() {
   browserSync.reload();
 });
@@ -102,7 +112,7 @@ gulp.task ("bowerBuild", ["bower"], function() {
 gulp.task ("htmlBuild", function() {
   browserSync.reload();
 });
-
+// This task tells the local serve to host our sites locally by reading index.html first.
 gulp.task ("server", function() {
   browserSync.init ({
     server: {
